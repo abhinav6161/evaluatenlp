@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+    <link href="main.css" rel="stylesheet"></head>
+
+    <body>
+
+        <header>
+        </header>
+
+        <main>
+            <section>
+                <form class="">
+                   <!-- <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name"> -->
+                    <div class="inputs">
+                    <div class="forminput">
+                        URL: <input type="text" id="input" name="fullname" placeholder="Place a valid URL here" >
+                    <div id="error">Please enter a valid URL to an article</div>
+                    </div>
+                    </div>
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)">
+                </form>
+            </section>
+
+            <section>
+                <strong>Form Results:</strong>
+                <div class="results">
+                    <div class="content">
+                        <div id=>Subjectivity:   </div>
+                        <div id="subjectivity"> </div>
+                    </div>
+                    <div class="content">
+                        <div id=>Polarity:   </div>
+                        <div id="polarity"> </div>
+                    </div>
+                    <div class="content">
+                        <div id=>Confidence:   </div>
+                        <div id="confidence"> </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>This is a footer</p>
+        </footer>
+<script>
+  // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+</script>
+    <script src="main.js"></script></body>
+</html>
